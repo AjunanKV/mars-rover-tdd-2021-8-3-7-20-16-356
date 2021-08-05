@@ -51,10 +51,12 @@ public class Marsrover {
     }
 
     private static void move() {
-        final int locationX = getRoverStatus.getLocationX();;
-        final int locationY = getRoverStatus.getLocationY();
         final String direction = getRoverStatus.getDirection();
-        getRoverStatus = new RoverStatus(locationX,locationY+ 1, direction);
+        final int locationX = getRoverStatus.getLocationX();
+        final int locationY = getRoverStatus.getLocationY();
+        if (direction.equals("N")) {
+            getRoverStatus = new RoverStatus(locationX, locationY + 1, direction);
+        }
     }
 
     public RoverStatus getRoverStatus() {
