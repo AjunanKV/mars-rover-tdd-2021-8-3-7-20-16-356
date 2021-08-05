@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 //import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.Assertions;
 class DemoTest {
+    //north
     @Test
     void  should_return_LocationX_0_LocationY_1_Direction_N_when_execute_command_given_LocationX_0_LocationY_0_Direction_N_Command_M() {
         //given
@@ -49,7 +50,7 @@ class DemoTest {
     }
 //south
     @Test
-    void  should_return_LocationX_0_LocationY_1_Direction_S_when_execute_command_given_LocationX_0_LocationY_minus1_Direction_S_Command_M() {
+    void  should_return_LocationX_0_LocationY_minus1_Direction_S_when_execute_command_given_LocationX_0_LocationY_0_Direction_S_Command_M() {
         //given
         Marsrover marsRover = new Marsrover(new RoverStatus(0,0,"S"));
         RoverStatus expectedRoverStatus = new RoverStatus(0,-1,"S");
@@ -93,5 +94,20 @@ class DemoTest {
         Assertions.assertEquals(expectedRoverStatus.getDirection(), marsRover.getRoverStatus().getDirection());
     }
 
+    //west
+    @Test
+    void  should_return_LocationX_minus1_LocationY_0_Direction_W_when_execute_command_given_LocationX_0_LocationY_0_Direction_W_Command_M() {
+        //given
+        Marsrover marsRover = new Marsrover(new RoverStatus(0,0,"W"));
+        RoverStatus expectedRoverStatus = new RoverStatus(-1,0,"W");
+
+        //when
+        Marsrover.executeCommand("M");
+
+        //then
+        Assertions.assertEquals(expectedRoverStatus.getLocationX(), marsRover.getRoverStatus().getLocationX());
+        Assertions.assertEquals(expectedRoverStatus.getLocationY(), marsRover.getRoverStatus().getLocationY());
+        Assertions.assertEquals(expectedRoverStatus.getDirection(), marsRover.getRoverStatus().getDirection());
+    }
 
 }
