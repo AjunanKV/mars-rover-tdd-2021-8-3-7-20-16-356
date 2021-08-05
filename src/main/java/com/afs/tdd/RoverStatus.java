@@ -18,4 +18,8 @@ public class RoverStatus {
     public int getLocationY() {
         return locationY;
     }
+
+    public String getDirection() {
+        return direction;
+    }
 }
