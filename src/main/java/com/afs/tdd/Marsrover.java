@@ -22,6 +22,36 @@ public class Marsrover {
         {
             turnLeftDirection();
         }
+        else
+        {
+            complex(command);
+        }
+    }
+
+    private static void complex(String command) {
+        String[] splittedCommand = command.split("");
+        for(int i=0; i<splittedCommand.length; i++)
+        {
+            final int locationX = getRoverStatus.getLocationX();;
+            final int locationY = getRoverStatus.getLocationY();
+            final String direction = getRoverStatus.getDirection();
+            int newLocationX = locationX;
+            int newLocationY = locationY;
+            String newDirection = direction;
+            if(splittedCommand[i].equals("M"))
+            {
+                move();
+            }
+            else if(splittedCommand[i].equals("L"))
+            {
+                turnLeftDirection();
+            }
+            else if(splittedCommand[i].equals("R"))
+            {
+                turnRightDirection();
+            }
+        }
+
     }
 
     private static void turnLeftDirection() {

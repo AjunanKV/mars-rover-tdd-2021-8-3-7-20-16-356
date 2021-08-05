@@ -190,10 +190,10 @@ class DemoTest {
     void  should_return_LocationX_0_LocationY_2_Direction_W_when_execute_command_given_LocationX_0_LocationY_0_Direction_N_Command_MML() {
         //given
         Marsrover marsRover = new Marsrover(new RoverStatus(0,0,"N"));
-        RoverStatus expectedRoverStatus = new RoverStatus(0,2,"W");
+        RoverStatus expectedRoverStatus = new RoverStatus(-1,-1,"W");
 
         //when
-        Marsrover.executeCommand("MML");
+        Marsrover.executeCommand("LLMRM");
 
         //then
         Assertions.assertEquals(expectedRoverStatus.getLocationX(), marsRover.getRoverStatus().getLocationX());
