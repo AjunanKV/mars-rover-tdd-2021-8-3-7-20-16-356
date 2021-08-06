@@ -1,9 +1,8 @@
 package com.afs.tdd;
 
 import org.junit.jupiter.api.Test;
-//import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.Assertions;
-class DemoTest {
+class marsRoverTest {
     //north
     @Test
     void  should_return_LocationX_0_LocationY_1_Direction_N_when_execute_command_given_LocationX_0_LocationY_0_Direction_N_Command_M() {
@@ -187,7 +186,7 @@ class DemoTest {
     }
     //complex
     @Test
-    void  should_return_LocationX_0_LocationY_2_Direction_W_when_execute_command_given_LocationX_0_LocationY_0_Direction_N_Command_MML() {
+    void  should_return_LocationX_minus1_LocationY_minus1_Direction_W_when_execute_command_given_LocationX_0_LocationY_0_Direction_N_Command_LLMRM() {
         //given
         Marsrover marsRover = new Marsrover(new RoverStatus(0,0,"N"));
         RoverStatus expectedRoverStatus = new RoverStatus(-1,-1,"W");
