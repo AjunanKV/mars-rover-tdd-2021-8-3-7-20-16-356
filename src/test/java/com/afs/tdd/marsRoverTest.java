@@ -7,11 +7,11 @@ class marsRoverTest {
     @Test
     void  should_return_LocationX_0_LocationY_1_Direction_N_when_execute_command_given_LocationX_0_LocationY_0_Direction_N_Command_M() {
         //given
-        Marsrover marsRover = new Marsrover(new RoverStatus(0,0,"N"));
-        RoverStatus expectedRoverStatus = new RoverStatus(0,1,"N");
+        marsRover marsRover = new marsRover(new roverStatus(0,0,"N"));
+        roverStatus expectedRoverStatus = new roverStatus(0,1,"N");
 
         //when
-        Marsrover.executeCommand("M");
+        com.afs.tdd.marsRover.executeCommand("M");
 
         //then
         Assertions.assertEquals(expectedRoverStatus.getLocationX(), marsRover.getRoverStatus().getLocationX());
@@ -22,11 +22,11 @@ class marsRoverTest {
     @Test
     void  should_return_LocationX_0_LocationY_0_Direction_E_when_execute_command_given_LocationX_0_LocationY_0_Direction_N_Command_R() {
         //given
-        Marsrover marsRover = new Marsrover(new RoverStatus(0,0,"N"));
-        RoverStatus expectedRoverStatus = new RoverStatus(0,0,"E");
+        marsRover marsRover = new marsRover(new roverStatus(0,0,"N"));
+        roverStatus expectedRoverStatus = new roverStatus(0,0,"E");
 
         //when
-        Marsrover.executeCommand("R");
+        com.afs.tdd.marsRover.executeCommand("R");
 
         //then
         Assertions.assertEquals(expectedRoverStatus.getLocationX(), marsRover.getRoverStatus().getLocationX());
@@ -36,11 +36,11 @@ class marsRoverTest {
     @Test
     void  should_return_LocationX_0_LocationY_0_Direction_W_when_execute_command_given_LocationX_0_LocationY_0_Direction_N_Command_L() {
         //given
-        Marsrover marsRover = new Marsrover(new RoverStatus(0,0,"N"));
-        RoverStatus expectedRoverStatus = new RoverStatus(0,0,"W");
+        marsRover marsRover = new marsRover(new roverStatus(0,0,"N"));
+        roverStatus expectedRoverStatus = new roverStatus(0,0,"W");
 
         //when
-        Marsrover.executeCommand("L");
+        com.afs.tdd.marsRover.executeCommand("L");
 
         //then
         Assertions.assertEquals(expectedRoverStatus.getLocationX(), marsRover.getRoverStatus().getLocationX());
@@ -51,11 +51,11 @@ class marsRoverTest {
     @Test
     void  should_return_LocationX_0_LocationY_minus1_Direction_S_when_execute_command_given_LocationX_0_LocationY_0_Direction_S_Command_M() {
         //given
-        Marsrover marsRover = new Marsrover(new RoverStatus(0,0,"S"));
-        RoverStatus expectedRoverStatus = new RoverStatus(0,-1,"S");
+        marsRover marsRover = new marsRover(new roverStatus(0,0,"S"));
+        roverStatus expectedRoverStatus = new roverStatus(0,-1,"S");
 
         //when
-        Marsrover.executeCommand("M");
+        com.afs.tdd.marsRover.executeCommand("M");
 
         //then
         Assertions.assertEquals(expectedRoverStatus.getLocationX(), marsRover.getRoverStatus().getLocationX());
@@ -66,11 +66,11 @@ class marsRoverTest {
     @Test
     void  should_return_LocationX_0_LocationY_0_Direction_W_when_execute_command_given_LocationX_0_LocationY_0_Direction_S_Command_R() {
         //given
-        Marsrover marsRover = new Marsrover(new RoverStatus(0,0,"S"));
-        RoverStatus expectedRoverStatus = new RoverStatus(0,0,"W");
+        marsRover marsRover = new marsRover(new roverStatus(0,0,"S"));
+        roverStatus expectedRoverStatus = new roverStatus(0,0,"W");
 
         //when
-        Marsrover.executeCommand("R");
+        com.afs.tdd.marsRover.executeCommand("R");
 
         //then
         Assertions.assertEquals(expectedRoverStatus.getLocationX(), marsRover.getRoverStatus().getLocationX());
@@ -81,11 +81,11 @@ class marsRoverTest {
     @Test
     void  should_return_LocationX_0_LocationY_0_Direction_E_when_execute_command_given_LocationX_0_LocationY_0_Direction_S_Command_L() {
         //given
-        Marsrover marsRover = new Marsrover(new RoverStatus(0,0,"S"));
-        RoverStatus expectedRoverStatus = new RoverStatus(0,0,"E");
+        marsRover marsRover = new marsRover(new roverStatus(0,0,"S"));
+        roverStatus expectedRoverStatus = new roverStatus(0,0,"E");
 
         //when
-        Marsrover.executeCommand("L");
+        com.afs.tdd.marsRover.executeCommand("L");
 
         //then
         Assertions.assertEquals(expectedRoverStatus.getLocationX(), marsRover.getRoverStatus().getLocationX());
@@ -97,11 +97,11 @@ class marsRoverTest {
     @Test
     void  should_return_LocationX_minus1_LocationY_0_Direction_W_when_execute_command_given_LocationX_0_LocationY_0_Direction_W_Command_M() {
         //given
-        Marsrover marsRover = new Marsrover(new RoverStatus(0,0,"W"));
-        RoverStatus expectedRoverStatus = new RoverStatus(-1,0,"W");
+        marsRover marsRover = new marsRover(new roverStatus(0,0,"W"));
+        roverStatus expectedRoverStatus = new roverStatus(-1,0,"W");
 
         //when
-        Marsrover.executeCommand("M");
+        com.afs.tdd.marsRover.executeCommand("M");
 
         //then
         Assertions.assertEquals(expectedRoverStatus.getLocationX(), marsRover.getRoverStatus().getLocationX());
@@ -112,11 +112,11 @@ class marsRoverTest {
     @Test
     void  should_return_LocationX_0_LocationY_0_Direction_N_when_execute_command_given_LocationX_0_LocationY_0_Direction_W_Command_R() {
         //given
-        Marsrover marsRover = new Marsrover(new RoverStatus(0,0,"W"));
-        RoverStatus expectedRoverStatus = new RoverStatus(0,0,"N");
+        marsRover marsRover = new marsRover(new roverStatus(0,0,"W"));
+        roverStatus expectedRoverStatus = new roverStatus(0,0,"N");
 
         //when
-        Marsrover.executeCommand("R");
+        com.afs.tdd.marsRover.executeCommand("R");
 
         //then
         Assertions.assertEquals(expectedRoverStatus.getLocationX(), marsRover.getRoverStatus().getLocationX());
@@ -127,11 +127,11 @@ class marsRoverTest {
     @Test
     void  should_return_LocationX_0_LocationY_0_Direction_S_when_execute_command_given_LocationX_0_LocationY_0_Direction_W_Command_L() {
         //given
-        Marsrover marsRover = new Marsrover(new RoverStatus(0,0,"W"));
-        RoverStatus expectedRoverStatus = new RoverStatus(0,0,"S");
+        marsRover marsRover = new marsRover(new roverStatus(0,0,"W"));
+        roverStatus expectedRoverStatus = new roverStatus(0,0,"S");
 
         //when
-        Marsrover.executeCommand("L");
+        com.afs.tdd.marsRover.executeCommand("L");
 
         //then
         Assertions.assertEquals(expectedRoverStatus.getLocationX(), marsRover.getRoverStatus().getLocationX());
@@ -142,11 +142,11 @@ class marsRoverTest {
     @Test
     void  should_return_LocationX_1_LocationY_0_Direction_W_when_execute_command_given_LocationX_0_LocationY_0_Direction_E_Command_M() {
         //given
-        Marsrover marsRover = new Marsrover(new RoverStatus(0,0,"E"));
-        RoverStatus expectedRoverStatus = new RoverStatus(1,0,"E");
+        marsRover marsRover = new marsRover(new roverStatus(0,0,"E"));
+        roverStatus expectedRoverStatus = new roverStatus(1,0,"E");
 
         //when
-        Marsrover.executeCommand("M");
+        com.afs.tdd.marsRover.executeCommand("M");
 
         //then
         Assertions.assertEquals(expectedRoverStatus.getLocationX(), marsRover.getRoverStatus().getLocationX());
@@ -158,11 +158,11 @@ class marsRoverTest {
     @Test
     void  should_return_LocationX_0_LocationY_0_Direction_S_when_execute_command_given_LocationX_0_LocationY_0_Direction_E_Command_R() {
         //given
-        Marsrover marsRover = new Marsrover(new RoverStatus(0,0,"E"));
-        RoverStatus expectedRoverStatus = new RoverStatus(0,0,"S");
+        marsRover marsRover = new marsRover(new roverStatus(0,0,"E"));
+        roverStatus expectedRoverStatus = new roverStatus(0,0,"S");
 
         //when
-        Marsrover.executeCommand("R");
+        com.afs.tdd.marsRover.executeCommand("R");
 
         //then
         Assertions.assertEquals(expectedRoverStatus.getLocationX(), marsRover.getRoverStatus().getLocationX());
@@ -173,11 +173,11 @@ class marsRoverTest {
     @Test
     void  should_return_LocationX_0_LocationY_0_Direction_N_when_execute_command_given_LocationX_0_LocationY_0_Direction_E_Command_L() {
         //given
-        Marsrover marsRover = new Marsrover(new RoverStatus(0,0,"E"));
-        RoverStatus expectedRoverStatus = new RoverStatus(0,0,"N");
+        marsRover marsRover = new marsRover(new roverStatus(0,0,"E"));
+        roverStatus expectedRoverStatus = new roverStatus(0,0,"N");
 
         //when
-        Marsrover.executeCommand("L");
+        com.afs.tdd.marsRover.executeCommand("L");
 
         //then
         Assertions.assertEquals(expectedRoverStatus.getLocationX(), marsRover.getRoverStatus().getLocationX());
@@ -188,11 +188,11 @@ class marsRoverTest {
     @Test
     void  should_return_LocationX_minus1_LocationY_minus1_Direction_W_when_execute_command_given_LocationX_0_LocationY_0_Direction_N_Command_LLMRM() {
         //given
-        Marsrover marsRover = new Marsrover(new RoverStatus(0,0,"N"));
-        RoverStatus expectedRoverStatus = new RoverStatus(-1,-1,"W");
+        marsRover marsRover = new marsRover(new roverStatus(0,0,"N"));
+        roverStatus expectedRoverStatus = new roverStatus(-1,-1,"W");
 
         //when
-        Marsrover.executeCommand("LLMRM");
+        com.afs.tdd.marsRover.executeCommand("LLMRM");
 
         //then
         Assertions.assertEquals(expectedRoverStatus.getLocationX(), marsRover.getRoverStatus().getLocationX());

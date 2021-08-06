@@ -1,9 +1,9 @@
 package com.afs.tdd;
 
-public class Marsrover {
-    public static RoverStatus roverStatus;
+public class marsRover {
+    public static com.afs.tdd.roverStatus roverStatus;
 
-    public Marsrover(RoverStatus roverStatus) {
+    public marsRover(com.afs.tdd.roverStatus roverStatus) {
         this.roverStatus = roverStatus;
 
     }
@@ -43,7 +43,7 @@ public class Marsrover {
 
             newDirection = "N";
         }
-        roverStatus = new RoverStatus(locationX, locationY, newDirection);
+        roverStatus = new roverStatus(locationX, locationY, newDirection);
     }
 
     private static void turnRightDirection() {
@@ -67,7 +67,7 @@ public class Marsrover {
 
             newDirection = "S";
         }
-        roverStatus = new RoverStatus(locationX, locationY, newDirection);
+        roverStatus = new roverStatus(locationX, locationY, newDirection);
     }
 
     private static void move() {
@@ -75,17 +75,17 @@ public class Marsrover {
         final int locationX = roverStatus.getLocationX();
         final int locationY = roverStatus.getLocationY();
         if (direction.equals("N")) {
-            roverStatus = new RoverStatus(locationX, locationY + 1, direction);
+            roverStatus = new roverStatus(locationX, locationY + 1, direction);
         } else if (direction.equals("S")) {
-            roverStatus = new RoverStatus(locationX, locationY - 1, direction);
+            roverStatus = new roverStatus(locationX, locationY - 1, direction);
         } else if (direction.equals("W")) {
-            roverStatus = new RoverStatus(locationX - 1, locationY, direction);
+            roverStatus = new roverStatus(locationX - 1, locationY, direction);
         } else if (direction.equals("E")) {
-            roverStatus = new RoverStatus(locationX + 1, locationY, direction);
+            roverStatus = new roverStatus(locationX + 1, locationY, direction);
         }
     }
 
-    public RoverStatus getRoverStatus() {
+    public com.afs.tdd.roverStatus getRoverStatus() {
         return roverStatus;
     }
 }

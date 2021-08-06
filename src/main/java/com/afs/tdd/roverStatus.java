@@ -1,11 +1,11 @@
 package com.afs.tdd;
 
-public class RoverStatus {
+public class roverStatus {
     private int locationX;
     private int locationY;
     private String direction;
 
-    public RoverStatus(int locationX, int locationY, String direction) {
+    public roverStatus(int locationX, int locationY, String direction) {
         this.locationX = locationX;
         this.locationY = locationY;
         this.direction = direction;
