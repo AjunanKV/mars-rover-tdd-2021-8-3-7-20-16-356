@@ -3,9 +3,9 @@ package com.afs.tdd;
 public class roverStatus {
     private int locationX;
     private int locationY;
-    private String direction;
+    private char direction;
 
-    public roverStatus(int locationX, int locationY, String direction) {
+    public roverStatus(int locationX, int locationY, char direction) {
         this.locationX = locationX;
         this.locationY = locationY;
         this.direction = direction;
@@ -19,7 +19,7 @@ public class roverStatus {
         return locationY;
     }
 
-    public String getDirection() {
+    public char getDirection() {
         return direction;
     }
 }
