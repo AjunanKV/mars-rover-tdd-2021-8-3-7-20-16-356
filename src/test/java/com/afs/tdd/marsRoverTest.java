@@ -3,7 +3,7 @@ package com.afs.tdd;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 class marsRoverTest {
-    //north
+
     @Test
     void  should_return_LocationX_0_LocationY_1_Direction_N_when_execute_command_given_LocationX_0_LocationY_0_Direction_N_Command_M() {
         //given
@@ -47,7 +47,7 @@ class marsRoverTest {
         Assertions.assertEquals(expectedRoverStatus.getLocationY(), marsRover.getRoverStatus().getLocationY());
         Assertions.assertEquals(expectedRoverStatus.getDirection(), marsRover.getRoverStatus().getDirection());
     }
-//south
+
     @Test
     void  should_return_LocationX_0_LocationY_minus1_Direction_S_when_execute_command_given_LocationX_0_LocationY_0_Direction_S_Command_M() {
         //given
@@ -93,7 +93,6 @@ class marsRoverTest {
         Assertions.assertEquals(expectedRoverStatus.getDirection(), marsRover.getRoverStatus().getDirection());
     }
 
-    //west
     @Test
     void  should_return_LocationX_minus1_LocationY_0_Direction_W_when_execute_command_given_LocationX_0_LocationY_0_Direction_W_Command_M() {
         //given
@@ -138,7 +137,7 @@ class marsRoverTest {
         Assertions.assertEquals(expectedRoverStatus.getLocationY(), marsRover.getRoverStatus().getLocationY());
         Assertions.assertEquals(expectedRoverStatus.getDirection(), marsRover.getRoverStatus().getDirection());
     }
-    //east
+
     @Test
     void  should_return_LocationX_1_LocationY_0_Direction_W_when_execute_command_given_LocationX_0_LocationY_0_Direction_E_Command_M() {
         //given
